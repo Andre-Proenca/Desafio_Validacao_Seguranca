@@ -2,15 +2,18 @@ package com.devsuperior.bds04.entities;
 
 import java.util.Objects;
 
+import org.springframework.security.core.GrantedAuthority;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
+@SuppressWarnings("serial")
 @Entity
 @Table(name = "tb_role")
-public class Role {
+public class Role implements GrantedAuthority {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -33,6 +36,7 @@ public class Role {
 		this.id = id;
 	}
 
+	@Override
 	public String getAuthority() {
 		return authority;
 	}
@@ -43,7 +47,7 @@ public class Role {
 
 	@Override
 	public int hashCode() {
-		return Objects.hash(id);
+		return Objects.hash(authority);
 	}
 
 	@Override
@@ -55,8 +59,10 @@ public class Role {
 		if (getClass() != obj.getClass())
 			return false;
 		Role other = (Role) obj;
-		return Objects.equals(id, other.id);
+		return Objects.equals(authority, other.authority);
 	}
+
+	
 		
 
 }
