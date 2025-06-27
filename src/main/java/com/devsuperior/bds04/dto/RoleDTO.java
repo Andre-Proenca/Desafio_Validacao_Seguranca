@@ -2,6 +2,8 @@ package com.devsuperior.bds04.dto;
 
 import java.io.Serializable;
 
+import com.devsuperior.bds04.entities.Role;
+
 public class RoleDTO implements Serializable {
 	private static final long serialVersionUID = 1L;
 	
@@ -14,6 +16,11 @@ public class RoleDTO implements Serializable {
 	public RoleDTO(Long id, String authority) {
 		this.id = id;
 		this.authority = authority;
+	}
+	
+	public RoleDTO(Role role) {
+		id = role.getId();
+		authority = role.getAuthority();
 	}
 
 	public Long getId() {

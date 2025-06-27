@@ -24,7 +24,7 @@ public class User {
 	private String email;
 	private String password;
 	
-	@ManyToMany(fetch = FetchType.EAGER)
+	@ManyToMany(fetch = FetchType.EAGER)   //EAGER - puxou usuário veio junto os roles
 	@JoinTable(name = "tb_user_role", 
 		joinColumns = @JoinColumn(name = "user_id"),
 		inverseJoinColumns = @JoinColumn(name = "role_id"))
