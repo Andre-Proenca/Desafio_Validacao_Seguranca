@@ -7,6 +7,7 @@ Este projeto é parte de um desafio prático com foco em **validação de dados*
 Implementar as funcionalidades necessárias para que **todos os testes automatizados** do projeto base sejam aprovados.
 
 O projeto simula um sistema de **eventos** e **cidades**, com uma relação N-1 (vários eventos para uma cidade).
+![Eventos Cidades N-1](https://raw.githubusercontent.com/Andre-Proenca/imagens-devsuperior/refs/heads/main/DesafioValidacaoSeguranca.png)
 
 ---
 
